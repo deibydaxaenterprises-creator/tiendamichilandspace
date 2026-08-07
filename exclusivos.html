@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusivos | Michiland Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 18px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .list-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--purple-light), var(--accent));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .list-item:hover {
+            border-color: var(--purple-main);
+            background: var(--bg-card-hover);
+            transform: translateX(6px);
+            box-shadow: 0 8px 28px rgba(155, 48, 255, 0.3), 0 0 0 1px rgba(155, 48, 255, 0.35);
+        }
+        .list-item:hover::before { opacity: 1; }
+        .list-img {
+            width: 72px;
+            height: 72px;
+            border-radius: 14px;
+            background: linear-gradient(145deg, #140022, #2a0050);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .list-img img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(155,48,255,0.5));
+        }
+        .list-discount {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            z-index: 2;
+        }
+        .list-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .list-info h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-white);
+        }
+        .list-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .list-price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .list-price .old {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+        }
+        .list-price .current {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--success);
+        }
+        .list-btn {
+            background: linear-gradient(135deg, var(--purple-main), var(--purple-dark));
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 10px 16px;
+            border-radius: 9px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 14px rgba(155,48,255,0.35);
+        }
+        @media (max-width: 700px) {
+            .list-item {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 14px;
+            }
+            .list-price {
+                margin-right: 0;
+                align-items: flex-start;
+                order: 3;
+                width: 100%;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+            }
+            .list-btn {
+                width: 100%;
+                text-align: center;
+                order: 4;
+            }
+            .list-info h3, .list-info p {
+                white-space: normal;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-area">
+                <img src="logo.png" alt="Michiland Space">
+                <span class="logo-text">MICHILAND SPACE</span>
+            </a>
+                        <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="kits.html">Kits</a>
+                <a href="protes.html">Protes</a>
+                <a href="dinero.html">Dinero</a>
+                <a href="exclusivos.html" class="active">Exclusivos</a>
+                <a href="https://discord.gg/nA57fZqA35" class="discord-btn" target="_blank">Discord</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <img src="logo.png" alt="Logo" class="hero-logo">
+        <h1>EXCLUSIVOS</h1>
+        <p>Ítems únicos y limitados. Solo disponibles aquí.</p>
+        <div class="category-badge">ÍTEMS ÚNICOS</div>
+    </section>
+    <div class="container">
+        <h2 class="section-title">Ítems Exclusivos</h2>
+        <div class="list-container">
+            <a href="productos/exclusivo-1.html" class="list-item">
+                <div class="list-img">
+                    <span class="list-discount">-35%</span>
+                    <img src="images/exclusivos/producto-1/main.png" alt="EXCLUSIVO 1" onerror="this.src='logo.png'">
+                </div>
+                <div class="list-info">
+                    <h3>EXCLUSIVO 1</h3>
+                    <p>Ítem exclusivo del servidor.</p>
+                </div>
+                <div class="list-price">
+                    <span class="old">$8.00 USD</span>
+                    <span class="current">$5.20 USD</span>
+                </div>
+                <span class="list-btn">Comprar</span>
+            </a>
+            <a href="productos/exclusivo-2.html" class="list-item">
+                <div class="list-img">
+                    <span class="list-discount">-35%</span>
+                    <img src="images/exclusivos/producto-2/main.png" alt="EXCLUSIVO 2" onerror="this.src='logo.png'">
+                </div>
+                <div class="list-info">
+                    <h3>EXCLUSIVO 2</h3>
+                    <p>Ítem limitado y especial.</p>
+                </div>
+                <div class="list-price">
+                    <span class="old">$12.00 USD</span>
+                    <span class="current">$7.80 USD</span>
+                </div>
+                <span class="list-btn">Comprar</span>
+            </a>
+            <a href="productos/exclusivo-3.html" class="list-item">
+                <div class="list-img">
+                    <span class="list-discount">-35%</span>
+                    <img src="images/exclusivos/producto-3/main.png" alt="EXCLUSIVO 3" onerror="this.src='logo.png'">
+                </div>
+                <div class="list-info">
+                    <h3>EXCLUSIVO 3</h3>
+                    <p>Ítem raro con beneficios únicos.</p>
+                </div>
+                <div class="list-price">
+                    <span class="old">$18.00 USD</span>
+                    <span class="current">$11.70 USD</span>
+                </div>
+                <span class="list-btn">Comprar</span>
+            </a>
+            <a href="productos/exclusivo-4.html" class="list-item">
+                <div class="list-img">
+                    <span class="list-discount">-35%</span>
+                    <img src="images/exclusivos/producto-4/main.png" alt="EXCLUSIVO 4" onerror="this.src='logo.png'">
+                </div>
+                <div class="list-info">
+                    <h3>EXCLUSIVO 4</h3>
+                    <p>Ítem premium exclusivo.</p>
+                </div>
+                <div class="list-price">
+                    <span class="old">$25.00 USD</span>
+                    <span class="current">$16.25 USD</span>
+                </div>
+                <span class="list-btn">Comprar</span>
+            </a>
+            <a href="productos/exclusivo-5.html" class="list-item">
+                <div class="list-img">
+                    <span class="list-discount">-35%</span>
+                    <img src="images/exclusivos/producto-5/main.png" alt="EXCLUSIVO 5" onerror="this.src='logo.png'">
+                </div>
+                <div class="list-info">
+                    <h3>EXCLUSIVO 5</h3>
+                    <p>El exclusivo más valioso.</p>
+                </div>
+                <div class="list-price">
+                    <span class="old">$35.00 USD</span>
+                    <span class="current">$22.75 USD</span>
+                </div>
+                <span class="list-btn">Comprar</span>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <img src="logo.png" alt="Logo" class="logo-small">
+        <p><strong>Michiland Space</strong> — Tienda Oficial</p>
+        <p>No estamos afiliados con Mojang AB ni Microsoft.</p>
+        <p style="margin-top: 8px; opacity: 0.7;">© 2026 Michiland Space</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
