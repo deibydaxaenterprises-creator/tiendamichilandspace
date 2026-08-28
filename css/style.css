@@ -80,7 +80,7 @@ header {
     box-shadow: 0 0 40px rgba(155,48,255,0.5); animation: float 4.5s ease-in-out infinite;
     object-fit: contain;
 }
-/* Categorías: sin sombra. Inicio (logo.png) sí mantiene el efecto */
+/* Categorías: sin sombra. Inicio (logo.png) mantiene el efecto */
 .hero .hero-logo:not([src*="logo.png"]) {
     border-radius: 0 !important;
     box-shadow: none !important;
