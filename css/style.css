@@ -80,10 +80,10 @@ header {
     box-shadow: 0 0 40px rgba(155,48,255,0.5); animation: float 4.5s ease-in-out infinite;
     object-fit: contain;
 }
-/* Categorías (iconos): solo la imagen, sin marco ni brillo */
-.hero-logo[src*="icons/"] {
-    border-radius: 0;
-    box-shadow: none;
+/* Categorías: sin sombra. Inicio (logo.png) sí mantiene el efecto */
+.hero .hero-logo:not([src*="logo.png"]) {
+    border-radius: 0 !important;
+    box-shadow: none !important;
 }
 @keyframes float {
     0%, 100% { transform: translateY(0); }
